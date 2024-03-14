@@ -1,4 +1,4 @@
-package my_api;
+package learn1.my_api;
 
 public enum StringUtils {
     UTIL_1("/"),
@@ -11,8 +11,8 @@ public enum StringUtils {
 
     public String getString(Object... ints){
         String result = "";
-        for(int i=0; i<ints.length ; i++){
-            result = result.concat(separator + ints[i].toString());
+        for(var i : ints){
+            result = result.concat(i.toString()+separator);
         }
         return result;
     }
